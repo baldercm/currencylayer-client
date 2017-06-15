@@ -5,9 +5,5 @@ node_js:
   - v7
   - v8
 
-cache:
-  directories:
-  - node_modules
-
 after_success:
   - npm run coveralls
