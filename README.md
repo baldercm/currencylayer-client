@@ -30,9 +30,45 @@ let client = new CurrencyLayerClient({apiKey: 'YOURAPIKEY'})
 let client = new CurrencyLayerClient({apiKey: 'YOURAPIKEY', free: false})
 ```
 
-All client mehtods return:
-- a promise resolved with the full response for `success=true` responses
+All client methods return a (bluebird) Promise:
+
+- a promise resolved with the full response body for `success=true` responses
+
+```javascript
+// succesfull response resolves with body
+{
+  "success": true,
+  "terms": "https://currencylayer.com/terms",
+  "privacy": "https://currencylayer.com/privacy",
+  "timestamp": 1432400348,
+  "source": "USD",
+  "quotes": {
+    "USDAUD": 1.278342,
+    "USDEUR": 0.908019,
+    "USDGBP": 0.645558,
+    "USDPLN": 3.731504
+  }
+}
+```
+
 - a promise rejected with an error holding the code and info for `success=false` responses
+
+```javascript
+// fail response rejects with error
+{
+  "success": false,
+  "error": {
+    "code": 104,
+    "info": "Your monthly usage limit has been reached. Please upgrade your subscription plan."    
+  }
+}
+
+client.live()
+.catch(err => {
+  console.log(err.code)    // 104
+  console.log(err.message) // Your monthly usage limit has been reached...
+})
+```
 
 
 ### `live({currencies, source})`
