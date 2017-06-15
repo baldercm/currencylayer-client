@@ -1,0 +1,26 @@
+{
+  "folders":
+  [
+    {
+      "folder_exclude_patterns":
+      [
+        "coverage",
+        "node_modules",
+        "report"
+      ],
+      "path": "."
+    }
+  ],
+  "SublimeLinter":
+  {
+    "linters":
+    {
+      "jshint": {
+        "@disable": true
+      },
+      "jscs": {
+        "@disable": true
+      }
+    }
+  }
+}
