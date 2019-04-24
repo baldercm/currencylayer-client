@@ -13,7 +13,7 @@
     "bluebird": "^3.5.4",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "request": "2.88.0",
+    "request": "^2.88.0",
     "request-promise": "^4.2.4"
   },
   "devDependencies": {
@@ -21,7 +21,7 @@
     "chai-as-promised": "^7.1.1",
     "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
-    "istanbul": "0.4.5",
+    "istanbul": "^0.4.5",
     "mocha": "^6.1.4",
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0"
