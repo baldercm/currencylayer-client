@@ -1,6 +1,6 @@
 {
   "name": "currencylayer-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A nodejs client to consume the CurrencyLayer API for exchange rates & currency conversion",
   "main": "index.js",
   "license": "MIT",
